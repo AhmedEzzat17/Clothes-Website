@@ -17,23 +17,23 @@ html {
 }
 .fade-in {
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateY(-50px);
   transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
   will-change: opacity, transform;
 }
 .fade-in.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0px);
 }
 .fade-in-left {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateY(50px);
   transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
   will-change: opacity, transform;
 }
 .fade-in-left.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0px);
 }
 
 /* navbar */
@@ -171,12 +171,12 @@ html {
 /* carousel */
 .carousel {
   opacity: 0;
-  transform: translateX(-400px);
+  transform: translateX(-200px);
   transition: opacity 1s ease, transform 1s ease;
 }
 .carousel.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 .carousel-item img {
     object-fit: cover;
@@ -190,7 +190,7 @@ html {
 }
 .carousel-item {
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 .custom-caption {
     position: absolute;
@@ -286,14 +286,24 @@ html {
     gap: 1rem;
     justify-content: center;
   }
+  @media (max-width:750px) {
+    .grid {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 10.1rem);
+      gap: 1rem;
+      justify-content: center;
+    }
+  
+  }
   .card {
     position: relative;
     background-color: #1e1e1e;
     overflow-y: hidden;
-    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 7px;
     min-height: 300px;
     transition: transform 0.3s ease;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
   }
   .card-front h1 {
     color: #fff;
@@ -436,12 +446,6 @@ html {
     opacity: 1;
     transition: opacity 0.3s ease;
   }
-  @media (max-width: 465px){
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, 11rem);
-    }
-  }
   
   /* ########################################################################## */
   /* Slider */
@@ -510,6 +514,13 @@ html {
   .testimonials-section ul {
     padding-left: 0rem !important;
   }
+  @media (max-width: 450px){
+    .testimonials-section .testimonial .user-image {
+      width: 180px;
+      height: 180px;  
+      height: auto;
+  }
+}
     
   /* ########################################################################## */
   /* gallery */
@@ -538,6 +549,11 @@ html {
   }
   .gallery-section .gallery-item:hover .gallery-image {
     transform: scale(1.3);
+  }
+  @media (max-width:450px) {
+    .gallery-section .gallery-list .gallery-item {
+      width: calc(100% / 2 - 32px);
+    }
   }
 
   /* ########################################################################## */
@@ -673,8 +689,8 @@ ul {
         flex: 0 0 48%;
     }
     .footer-col .social-links a {
-      height: 30px;
-      width: 30px;
-      line-height: 30px;
+      height: 25px;
+      width: 25px;
+      line-height: 25px;
     }
 }

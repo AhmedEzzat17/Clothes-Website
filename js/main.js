@@ -15,7 +15,7 @@ let swiper = new Swiper(".slider-wrapper", {
     0: {
       slidesPerView: 1,
     },
-    400: {
+    365: {
       slidesPerView: 2,
     },
     1024: {
@@ -23,6 +23,7 @@ let swiper = new Swiper(".slider-wrapper", {
     },
   },
 });
+
 
 
 document.querySelectorAll(".register-button").forEach(function(button) {
