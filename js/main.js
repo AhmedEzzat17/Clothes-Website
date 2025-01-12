@@ -15,7 +15,7 @@ let swiper = new Swiper(".slider-wrapper", {
     0: {
       slidesPerView: 1,
     },
-    365: {
+    345: {
       slidesPerView: 2,
     },
     1024: {
