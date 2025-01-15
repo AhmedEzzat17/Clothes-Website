@@ -465,7 +465,7 @@ html {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  transition: opacity 0.5s linear;
+  transition: opacity 1s linear;
   opacity: 1;
   cursor: pointer;
 }

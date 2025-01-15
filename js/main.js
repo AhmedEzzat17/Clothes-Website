@@ -112,51 +112,104 @@ document.addEventListener("DOMContentLoaded", function () {
       {img: "productImage2", border: "movingBorder2", srcs: [
           "../images/2.1.webp",
           "../images/2.2.webp", 
-          "./images/2.3.webp",
-          "./images/2.4.webp",
-          "./images/2.5.webp"
+          "../images/2.3.webp",
+          "../images/2.4.webp",
+          "../images/2.5.webp"
         ]},
       {img: "productImage3", border: "movingBorder3", srcs: [
           "../images/3.1.webp",
           "../images/3.2.webp", 
-          "./images/3.3.webp",
-          "./images/3.4.webp",
-          "./images/3.5.webp"
+          "../images/3.3.webp",
+          "../images/3.4.webp",
+          "../images/3.5.webp"
         ]},
       {img: "productImage4", border: "movingBorder4", srcs: [
           "../images/4.1.webp",
           "../images/4.2.webp", 
-          "./images/4.3.webp",
-          "./images/4.4.webp",
-          "./images/4.5.webp"
+          "../images/4.3.webp",
+          "../images/4.4.webp",
+          "../images/4.5.webp"
         ]},
       {img: "productImage5", border: "movingBorder5", srcs: [
           "../images/5.1.webp",
           "../images/5.2.webp", 
-          "./images/5.3.webp",
-          "./images/5.4.webp",
-          "./images/5.5.webp"
+          "../images/5.3.webp",
+          "../images/5.4.webp",
+          "../images/5.5.webp"
         ]},
       {img: "productImage6", border: "movingBorder6", srcs: [
           "../images/6.1.webp",
           "../images/6.2.webp", 
-          "./images/6.3.webp",
-          "./images/6.4.webp",
-          "./images/6.5.webp"
+          "../images/6.3.webp",
+          "../images/6.4.webp",
+          "../images/6.5.webp"
         ]},
       {img: "productImage7", border: "movingBorder7", srcs: [
           "../images/7.1.webp",
           "../images/7.2.webp", 
-          "./images/7.3.webp",
-          "./images/7.4.webp",
+          "../images/7.3.webp",
+          "../images/7.4.webp",
         ]},
       {img: "productImage8", border: "movingBorder8", srcs: [
           "../images/8.1.webp",
           "../images/8.2.webp", 
-          "./images/8.3.webp",
-          "./images/8.4.webp",
-          "./images/8.5.webp",
-          "./images/8.6.webp"
+          "../images/8.3.webp",
+          "../images/8.4.webp",
+          "../images/8.5.webp",
+          "../images/8.6.webp"
+        ]},
+      {img: "productImage11", border: "movingBorder11", srcs: [
+          "../images/11.1.webp",
+          "../images/11.2.webp", 
+          "../images/11.3.webp",
+          "../images/11.4.webp",
+          "../images/11.5.webp",
+        ]},
+      {img: "productImage12", border: "movingBorder12", srcs: [
+          "../images/12.1.webp",
+          "../images/12.2.webp", 
+          "../images/12.3.webp",
+          "../images/12.4.webp",
+        ]},
+      {img: "productImage13", border: "movingBorder13", srcs: [
+          "../images/13.1.webp",
+          "../images/13.2.webp", 
+          "../images/13.3.webp",
+          "../images/13.4.webp",
+          "../images/13.5.webp",
+        ]},
+      {img: "productImage14", border: "movingBorder14", srcs: [
+          "../images/14.1.webp",
+          "../images/14.2.webp", 
+          "../images/14.3.webp",
+          "../images/14.4.webp",
+        ]},
+      {img: "productImage15", border: "movingBorder15", srcs: [
+          "../images/15.1.webp",
+          "../images/15.2.webp", 
+          "../images/15.3.webp",
+        ]},
+      {img: "productImage16", border: "movingBorder16", srcs: [
+          "../images/16.1.webp",
+          "../images/16.2.webp", 
+          "../images/16.3.jpg",
+          "../images/16.4.webp",
+          "../images/16.5.webp",
+          "../images/16.6.webp",
+        ]},
+      {img: "productImage17", border: "movingBorder17", srcs: [
+          "../images/17.1.webp",
+          "../images/17.2.webp", 
+          "../images/17.3.webp",
+          "../images/17.4.webp",
+          "../images/17.5.webp",
+          "../images/17.6.webp",
+        ]},
+      {img: "productImage18", border: "movingBorder18", srcs: [
+          "../images/18.1.webp",
+          "../images/18.2.webp", 
+          "../images/18.3.webp",
+          "../images/18.4.webp",
         ]},
   ];
 
@@ -166,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let currentIndex = 0;
       let intervalId;
       const totalImages = set.srcs.length;
-      const timePerImage = 1500; // الوقت الذي تستغرقه كل صورة (بالميلي ثانية)
+      const timePerImage = 1000; // الوقت الذي تستغرقه كل صورة (بالميلي ثانية)
       const totalTime = totalImages * timePerImage; // الوقت الكامل لتغيير الصور
 
       function changeImage() {
