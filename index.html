@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- الكارت -->
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
@@ -26,19 +27,17 @@
                 <a href="#" class="nav-link login">
                     <i class="fas fa-user"></i> تسجيل الدخول
                 </a>
-                <a href="#" class="nav-link d-none d-lg-block">
-                    <i class="fa-solid fa-heart" style="color: #ff0505;"></i>
-                </a>
-                <a href="#" class="shop nav-link d-none d-lg-block">
-                    <i class="fas fa-shopping-cart"></i> 0
+                <a href="#" class="shop nav-link" data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasExample"role="button" aria-controls="offcanvasExample"> 
+                    <img src="./images/shopping-bag.png" alt="" class="bag-icon">
+                    <div class="cart-count">0</div>
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="main">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " style="direction: rtl;">
                     <li class="nav-item">
-                        <a class="nav-link active" style="color: #FFC553;" aria-current="page" href="#">الصفحة
-                            الرئيسية</a>
+                        <a class="nav-link active" aria-current="page" href="#">الصفحةالرئيسية</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#men">الرجالي</a>
@@ -77,6 +76,40 @@
     </nav>
     <!-- navbar -->
 
+    <!-- shopping-cart -->
+    <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <div class="shopping-cart">
+            <img src="./images/shopping-bag.png" alt="">
+            <div class="cart-count">0</div>
+        </div>
+    </a>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <div class="header-content">
+                <span class="cart-title">إجمالي سلة التسوق</span>
+                <p class="cart-total fs-5 mt-1 mb-0">EGP 0.00</p>
+                <p class="text-muted fs-6 mb-0">0 منتج</p>
+            </div>
+            <div class="cart-icon-container">
+                <p class="cart-label fs-5">سلة التسوق</p>
+                <img src="./images/shopping-bag.png" class="imag" alt="سلة التسوق">
+            </div>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <hr>
+        <div class="offcanvas-body">
+            <div class="container my-5">
+                <div class="cart-container">
+                    <div class="cart-body text-center">
+                        <p class="text-muted mb-1">سلة التسوق فارغة حاليا</p>
+                        <hr> <a href="#" class="btn mt-3 shop-btn">مواصلة التسوق</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- shopping-cart -->
+
     <!-- scroll Up -->
     <div class="up">
         <img src="./images/scroll.png" alt="">
@@ -84,7 +117,7 @@
     <!-- scroll Up -->
 
     <!-- carousel -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -99,6 +132,7 @@
                 <div class="carousel-caption custom-caption fade-in">
                     <h1>اسـتـمـتـع بـأنـاقـة مـثـالـيـة</h1>
                     <p class="mt-3">منتجات عالية الجودة تناسب جميع الأذواق</p>
+                    <button type="button" class="btn mt-5">تسوق الآن</button>
                 </div>
             </div>
             <div class="carousel-item">
@@ -106,6 +140,7 @@
                 <div class="carousel-caption custom-caption fade-in">
                     <h1>الـتـمـيـز فـي كـل تـفـصـيـلـة</h1>
                     <p class="mt-3">اجعل مظهرك أنيقاً مع كل صيحات الموضة</p>
+                    <button type="button" class="btn mt-5">تسوق الآن</button>
                 </div>
             </div>
             <div class="carousel-item">
@@ -113,19 +148,10 @@
                 <div class="carousel-caption custom-caption fade-in">
                     <h1>كـل مـا تـحـتـاجـه لإطـلالـة مـمـيـزة</h1>
                     <p class="mt-3">صممت خصيصاً لتتناسب مع اسلوب حياتك</p>
+                    <button type="button" class="btn mt-5">تسوق الآن</button>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
     <!-- carousel -->
 
@@ -148,455 +174,242 @@
                 <div class="card-front-wrap">
                     <div class="card-front">
                         <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
+                        <img src="./images/1.1.webp" alt="Product Image" class="card-image" id="productImage1">
+                        <div class="moving-border" id="movingBorder1"></div>
                     </div>
                     <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
                         <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
                     </div>
                 </div>
             </div>
             <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
+                <a href="#0" aria-labelledby="product2"></a>
                 <div class="card-front-wrap">
                     <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
+                        <img src="./images/2.1.webp" alt="Product Image" class="card-image" id="productImage2">
+                        <div class="moving-border" id="movingBorder2"></div>
                     </div>
                     <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
                         <p class="price">السعر: 99 دولار</p>
                     </div>
                 </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;</div>
-                    </div>
-                </div>
-            </div>
 
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <p class="sale">تخفيض</p>
+                        <img src="./images/3.1.webp" alt="Product Image" class="card-image" id="productImage3">
+                        <div class="moving-border" id="movingBorder3"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <img src="./images/4.1.webp" alt="Product Image" class="card-image" id="productImage4">
+                        <div class="moving-border" id="movingBorder4"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <p class="sale">تخفيض</p>
+                        <img src="./images/5.1.webp" alt="Product Image" class="card-image" id="productImage5">
+                        <div class="moving-border" id="movingBorder5"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <img src="./images/6.1.webp" alt="Product Image" class="card-image" id="productImage6">
+                        <div class="moving-border" id="movingBorder6"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <p class="sale">تخفيض</p>
+                        <img src="./images/7.1.webp" alt="Product Image" class="card-image" id="productImage7">
+                        <div class="moving-border" id="movingBorder7"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <img src="./images/8.1.webp" alt="Product Image" class="card-image" id="productImage8">
+                        <div class="moving-border" id="movingBorder8"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
     <!-- men -->
-
-    <!-- tabe -->
-    <div class="tape">
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-    </div>
-    <!-- tabe -->
 
     <!-- women -->
     <section class="product-section" id="women">
         <h2 class="section-title fade-in">قسم الحريمي</h2>
         <div class="grid">
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">جديد</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card   hidden">
+            <div class="card hidden">
                 <a href="#0" aria-labelledby="product1"></a>
                 <div class="card-front-wrap">
                     <div class="card-front">
                         <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
+                        <img src="./images/1.1.webp" alt="Product Image" class="card-image" id="productImage11">
+                        <div class="moving-border" id="movingBorder11"></div>
                     </div>
                     <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
                         <p class="price">السعر: 99 دولار</p>
                     </div>
                 </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
                 <div class="card-front-wrap">
                     <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
+                        <img src="./images/2.1.webp" alt="Product Image" class="card-image" id="productImage2">
+                        <div class="moving-border" id="movingBorder2"></div>
                     </div>
                     <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
                         <p class="price">السعر: 99 دولار</p>
                     </div>
                 </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <p class="sale">تخفيض</p>
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card   hidden">
-                <a href="#0" aria-labelledby="product1"></a>
-                <div class="card-front-wrap">
-                    <div class="card-front">
-                        <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Product Image"
-                            class="card-image">
-                    </div>
-                    <div class="card-footer">
-                        <p class="description">وصف عن المنتج أو الخدمة </p>
-                        <p class="price">السعر: 99 دولار</p>
-                    </div>
-                </div>
-                <div class="card-overlay">
-                    <h5 id="product1">أطلبه الآن <i class="far fa-arrow-alt-circle-down fa-lg"></i></h5>
-                    <div class="card-body">
-                        <p>وصف عن المنتج أو الخدمة</p>
-                        <div class="register-button">أطلب الآن &#187;
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <p class="sale">تخفيض</p>
+                        <img src="./images/3.1.webp" alt="Product Image" class="card-image" id="productImage3">
+                        <div class="moving-border" id="movingBorder3"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <img src="./images/4.1.webp" alt="Product Image" class="card-image" id="productImage4">
+                        <div class="moving-border" id="movingBorder4"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <p class="sale">تخفيض</p>
+                        <img src="./images/5.1.webp" alt="Product Image" class="card-image" id="productImage5">
+                        <div class="moving-border" id="movingBorder5"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <img src="./images/6.1.webp" alt="Product Image" class="card-image" id="productImage6">
+                        <div class="moving-border" id="movingBorder6"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <p class="sale">تخفيض</p>
+                        <img src="./images/7.1.webp" alt="Product Image" class="card-image" id="productImage7">
+                        <div class="moving-border" id="movingBorder7"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card hidden">
+                <a href="#0" aria-labelledby="product2"></a>
+                <div class="card-front-wrap">
+                    <div class="card-front">
+                        <img src="./images/8.1.webp" alt="Product Image" class="card-image" id="productImage8">
+                        <div class="moving-border" id="movingBorder8"></div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="description">وصف عن المنتج أو الخدمة</p>
+                        <p class="price">السعر: 99 دولار</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
     <!-- women -->
-
-    <!-- tabe -->
-    <div class="tape">
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-    </div>
-    <!-- tabe -->
 
     <!-- slider -->
     <section class="testimonials-section" id="testimonials">
@@ -606,8 +419,7 @@
                 <div class="slider-wrapper">
                     <ul class="testimonials-list swiper-wrapper">
                         <li class="testimonial swiper-slide  fade-in-left">
-                            <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="User"
-                                class="user-image" />
+                            <img src="./images/1.1.webp" alt="User" class="user-image" />
                             <h3 class="name">Grey Plain Hoodie</h3>
                             <i class="feedback">"EGP ‏ 950💳 Pay by card & get an extra 5% off"</i>
                         </li>
@@ -620,9 +432,9 @@
                         <li class="testimonial swiper-slide  fade-in-left">
                             <img src="./images/16_f171dfaa-5cc1-4567-91fb-7b86945c12b6_1800x1800.png.webp" alt="User"
                                 class="user-image" />
-                            <h3 class="name">Black "Don't Blame A Clown" Crewneck</h3>
-                            <i class="feedback">"<del>EGP &rlm; 950</del> Sale price EGP ‏ 810 💳 Pay by card & get an
-                                extra 5% off 1 in stock"</i>
+                            <h3 class="name">Black"Don't Blame A Clown"Crewneck</h3>
+                            <i class="feedback">"<del>EGP &rlm; 950</del> Sale price EGP ‏ 810 💳 Pay by card & get
+                                anextra 5% off 1 in stock"</i>
                         </li>
                         <li class="testimonial swiper-slide  fade-in-left">
                             <img src="./images/303FE3FC-63CE-4B2D-A792-2FDB201D34B2_1800x1800.webp" alt="User"
@@ -647,24 +459,13 @@
     </section>
     <!-- slider -->
 
-    <!-- tabe -->
-    <div class="tape">
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-        <span>💳 احصل على 50% من الخصم عند الشراء بكارت فيزا</span>
-    </div>
-    <!-- tabe -->
-
     <!-- gallery -->
     <section class="gallery-section" id="gallery">
         <h2 class="section-title fade-in-left">معرض الصور</h2>
         <div class="section-content">
             <ul class="gallery-list">
                 <li class="gallery-item fade-in">
-                    <img src="./images/14684898-167C-412E-8A49-1E7F4517E459_1800x1800.webp" alt="Gallery Image"
-                        class="gallery-image" />
+                    <img src="./images/1.1.webp" alt="Gallery Image" class="gallery-image" />
                 </li>
                 <li class="gallery-item fade-in">
                     <img src="./images/C49F7FC0-C955-4767-8DED-C78B0387022B_1800x1800.webp" alt="Gallery Image"

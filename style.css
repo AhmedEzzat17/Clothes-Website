@@ -83,6 +83,9 @@ html {
 .navbar {
   background-color: var(--main-color--);
 }
+.nav-link.active{
+  color: var(--yellow-color--)!important;
+}
 .left-nav .nav-link,
 .navbar-brand {
   color: var(--white-color--) !important;
@@ -98,8 +101,26 @@ html {
   background-color: var(--yellow-color--);
   color: var(--main-color--) !important;
 }
-.shop:hover {
-  color: var(--yellow-color--) !important;
+.nav-link .bag-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+}
+.nav-link .cart-count {
+  position: absolute;
+  top: 55%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: white;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .menu .dropdown-item {
   text-align: center;
@@ -119,6 +140,80 @@ html {
 }
 .navbar .navbar-toggler[aria-expanded="true"] {
   border: none;
+}
+
+/* #################################################################### */
+/* bag-icon */
+.shopping-cart {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--yellow-color--);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.2s;
+}
+.shopping-cart img {
+  width: 70%;
+  height: 70%;
+}
+.cart-count {
+  position: absolute;
+  color: var(--main-color--);
+  border-radius: 50%;
+  font-size: 19px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shopping-cart:hover{
+  transform: scale(1.1);
+}
+.offcanvas-start{
+  width: 350px!important;
+}
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.cart-icon-container {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+}
+.cart-icon-container .imag {
+  width: 1.75rem;
+  position: absolute;
+  right: -10px;
+  top: 0;
+}
+.cart-icon-container p {
+  margin-right: 1.5rem;
+  font-weight: bold;
+}
+.shop-btn{
+  background: var(--yellow-color--)!important;
+  transition: 0.3s!important;
+}
+.shop-btn:hover{
+  transform: scale(1.05);
+}
+.shop-btn:focus,.btn-close:focus{
+  box-shadow: none!important;
+}
+@media (max-width: 767px) {
+  .offcanvas-start {
+    width: 300px!important;
+  }
 }
 
 /* #################################################################### */
@@ -146,7 +241,6 @@ html {
 .up:hover {
   bottom: 35px;
   transform: scale(1.1);
-  /* background-color: var(--main-color--); */
 }
 .up.show {
   transform: scale(1);
@@ -183,6 +277,15 @@ html {
   object-fit: cover;
   height: calc(100vh - 57.33px);
   filter: brightness(0.6);
+}
+.carousel .btn{
+  background-color: var(--yellow-color--);
+  transition: 0.3s;
+}
+.carousel .btn:hover,.carousel .btn:focus{
+  background-color: var(--yellow-color--);
+  transform: scale(1.05);
+  box-shadow: none;
 }
 @media (max-width: 767px) {
   .carousel-caption {
@@ -249,14 +352,14 @@ html {
   background-color: var(--main-color--);
 }
 .tape span {
-  animation: scroll-left 10s linear infinite;
+  animation: scroll-Right 10s linear infinite;
 }
-@keyframes scroll-left {
+@keyframes scroll-Right {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
 }
 
@@ -273,6 +376,7 @@ html {
 }
 .product-section {
   padding: 20px 0 50px;
+  background: none!important;
 }
 .section-title {
   padding-top: 35px;
@@ -284,7 +388,7 @@ html {
 .grid {
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 12rem);
+  grid-template-columns: repeat(auto-fit, 17rem);
   gap: 1rem;
   justify-content: center;
 }
@@ -292,31 +396,23 @@ html {
   .grid {
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 9.3rem);
+    grid-template-columns: repeat(auto-fit, 9.5rem);
     gap: 1rem;
     justify-content: center;
   }
 }
 .card {
   position: relative;
-  background-color: #1e1e1e;
   overflow-y: hidden;
-  border-radius: 7px;
   min-height: 300px;
   transition: transform 0.3s ease;
-  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
-}
-.card-front h1 {
-  color: #fff;
-  margin: 0;
-  letter-spacing: 0;
-  line-height: 1;
+  border: none!important;             /*  */
 }
 .card h5 {
   margin: 0;
   display: block;
   background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: var(--white-color--);
 }
 .card a {
   position: absolute;
@@ -328,25 +424,19 @@ html {
 }
 .sale {
   position: absolute;
-  right: 5px;
+  right: 0px;
   background-color: red;
   color: var(--white-color--);
   padding: 5px;
   border-radius: 5px 0 5px 5px;
   font-weight: bold;
+  z-index: 100000;
 }
-.card a:hover ~ .card-overlay,
-.card a:focus ~ .card-overlay {
-  transform: translate3d(0, 0, 0);
-}
-.card a:hover ~ .card-overlay h5,
-.card a:focus ~ .card-overlay h5 {
-  transform: translate3d(0, 0, 0);
-  color: #1e1e1e;
-}
-.card a:hover ~ .card-overlay .card-body,
-.card a:focus ~ .card-overlay .card-body {
-  opacity: 1;
+.card-front{
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
 }
 .card-front-wrap {
   padding: 10px 5px;
@@ -356,12 +446,11 @@ html {
   overflow: hidden;
   object-fit: cover;
 }
-.card-front {
-  margin-bottom: 10px;
-}
 .card-footer {
   margin-top: auto;
-  color: #fff;
+  color: var(--white-color--);
+  background: none!important;
+  border: none!important;
 }
 .card-footer p {
   font-size: 12px;
@@ -372,58 +461,22 @@ html {
 .card-footer i {
   margin-right: 10px;
 }
-.card-overlay {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  background-color: var(--yellow-color--);
-  transition: transform 500ms;
-  transform: translate3d(0, 100%, 0);
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-.card:hover .card-overlay {
-  transform: translateX(0);
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
-}
-.card-body {
-  flex-grow: 1;
-  padding: 1rem;
-  opacity: 0;
-  transition: opacity 500ms 100ms;
-  text-align: center;
-}
-.card-body p {
-  margin: 0;
-}
-.register-button {
-  display: inline-block;
-  padding: 4px 8px;
-  border: 2px solid #1e1e1e;
-  border-radius: 10px;
-  color: #1e1e1e;
-  margin-top: 20px;
-  transition: background-color 0.3s, color 0.3s;
-  position: relative;
-  cursor: pointer;
-}
-.register-button:hover {
-  background-color: red !important;
-  border: var(--white-color--) 1px solid !important;
-  border: none;
-  color: #fff;
-  transform: scale(1.1);
-}
 .card-image {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
+  transition: opacity 0.5s linear;
+  opacity: 1;
+  cursor: pointer;
+}
+.moving-border {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--main-color--);
+  transition: width 15s linear;
 }
 .card-footer .description {
   font-size: 14px;
@@ -433,19 +486,7 @@ html {
 .card-footer .price {
   font-size: 16px;
   font-weight: bold;
-  color: var(--yellow-color--);
   text-align: center;
-}
-.card-overlay h5 {
-  font-size: 18px;
-  color: #1e1e1e;
-  font-weight: bold;
-  cursor: pointer;
-}
-.card-overlay .card-body {
-  padding: 20px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
 }
 
 /* ########################################################################## */
@@ -474,11 +515,11 @@ html {
 }
 
 .testimonials-section .testimonial .user-image {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 50px;
+  width: 250px;
+  height: 300px;
+  margin-bottom: 25px;
   object-fit: cover;
-  border-radius: 50%;
+  position: relative;
   transition: all 0.2s;
 }
 
@@ -487,12 +528,12 @@ html {
 }
 
 .testimonials-section .testimonial .name {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   font-size: 1.12rem;
 }
 
 .testimonials-section .testimonial .feedback {
-  line-height: 25px;
+  line-height: 20px;
 }
 
 .testimonials-section .swiper-pagination-bullet {
@@ -504,7 +545,6 @@ html {
 
 .testimonials-section .swiper-slide-button {
   color: var(--yellow-color--);
-  margin-top: -50px;
   transition: 0.2s ease;
 }
 
@@ -520,6 +560,13 @@ html {
     width: 180px;
     height: 180px;
     height: auto;
+  }
+  .testimonials-section .testimonial .name {
+    font-size: 1rem;
+  }
+  .testimonials-section .testimonial .feedback {
+    line-height: 15px;
+    font-size: .8rem;
   }
 }
 
