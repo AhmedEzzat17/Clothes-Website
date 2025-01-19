@@ -501,7 +501,7 @@ ul {
   object-fit: cover;
   transition: opacity 0.5s linear;
   opacity: 1;
-  cursor: grab;
+  cursor: pointer;
 }
 .moving-border {
   display: none;
@@ -648,7 +648,7 @@ ul {
   width: 90%;
   height: 90%;
   object-fit: cover;
-  cursor: zoom-in;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
@@ -836,7 +836,7 @@ ul {
   font-size: 18px;
   color: var(--white-color--);
   text-transform: capitalize;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   font-weight: 500;
   position: relative;
 }
@@ -895,4 +895,13 @@ ul {
     width: 25px;
     line-height: 25px;
   }
+}
+.last-btn{
+  background-color: rgba(255, 255, 255, 0.2)!important;
+  color: var(--white-color--)!important;
+  width: 200px!important;
+}
+.last-btn:hover{
+  background-color: var(--white-color--)!important;
+  color: var(--main-color--)!important;
 }
