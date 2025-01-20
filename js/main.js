@@ -1,4 +1,4 @@
-let swiper = new Swiper(".slider-wrapper", {
+let swiper = new Swiper(".slider-wrapper", { // slider
   loop: true,
   grabCursor: true,
   spaceBetween: 10,
@@ -26,7 +26,7 @@ let swiper = new Swiper(".slider-wrapper", {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {  // navbar
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   navLinks.forEach(function(link) {
     link.addEventListener('click', function() {
@@ -39,14 +39,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.querySelectorAll(".register-button").forEach(function (button) {
-  button.addEventListener("click", function () {
-    window.open("https://www.google.com", "_blank");
-  });
-});
+// document.querySelectorAll(".register-button").forEach(function (button) {
+//   button.addEventListener("click", function () {
+//     window.open("https://www.google.com", "_blank");
+//   });
+// });
 
 
-let div = document.querySelector(".up");
+let div = document.querySelector(".up"); //scrool
 window.onscroll = function () {
   if (this.scrollY >= 500) {
     div.classList.add("show");
@@ -61,7 +61,7 @@ div.onclick = function () {
 };
 
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function () {  // load in nav , carousel
   const navbar = document.querySelector(".navbar");
   const carousel = document.querySelector(".carousel");
   const carousel_caption = document.querySelector(".carousel-caption");
@@ -71,7 +71,7 @@ window.addEventListener("load", function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {  // fade in , fade in left
   const fadeInElements = document.querySelectorAll(".fade-in, .fade-in-left");
 
   const observer = new IntersectionObserver(
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const cards = document.querySelectorAll(".card.hidden");
+const cards = document.querySelectorAll(".card.hidden"); // effect in cards
 function revealOnScroll() {
   cards.forEach((card) => {
     const rect = card.getBoundingClientRect();
@@ -113,17 +113,17 @@ window.addEventListener("scroll", revealOnScroll);
 document.addEventListener("DOMContentLoaded", revealOnScroll);
 
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {  //cards
   const imageSets = [
     {
       img: "productImage1",
       border: "movingBorder1",
       srcs: [
-        "../images/1.1.webp",
-        "../images/1.2.webp",
-        "../images/1.3.webp",
-        "../images/1.4.webp",
-        "../images/1.5.webp",
+        "../images/a.1.jpg",
+        "../images/a.2.jpg",
+        "../images/a.3.jpg",
+        "../images/a.4.jpg",
+        "../images/a.5.jpg",
       ],
     },
     {

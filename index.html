@@ -14,9 +14,6 @@
 
 <body>
 
-<!-- التكبير وتصغيرها المعرض نكبره -->
-
-
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
@@ -24,7 +21,9 @@
                 aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars "></i>
             </button>
-            <a class="navbar-brand d-block d-lg-none ms-auto fw-bold" href="#">دهب ستور</a>
+            <div class="logo1">
+                <a class="navbar-brand d-block d-lg-none" href="#"><img src="./images/logo.jpg" alt=""></a>
+            </div>
 
             <div class="left-nav d-flex align-items-center me-auto">
                 <a href="#" class="nav-link login">
@@ -69,14 +68,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#testimonials">أحدث المنتجات</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#gallery">معرض الصور</a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" style="color: rgba(255, 0, 0, 0.783)!important;" href="#">التخفيضات</a>
                     </li>
                 </ul>
-                <a class="navbar-brand ms-auto fw-bold d-none d-lg-block" href="#">دهب ستور</a>
+                <div class="logo">
+                    <a class="navbar-brand ms-auto fw-bold d-none d-lg-block" href="#"><img src="./images/logo.jpg" alt=""></a>
+                </div>
             </div>
         </div>
     </nav>
@@ -175,20 +173,21 @@
     <section class="product-section" id="men">
         <h2 class="section-title fade-in">قسم الرجالى</h2>
         <div class="grid">
-            <div class="card hidden">
+            <!-- onclick="window.open('./products/index.html', '_blank');" -->
+            <div class="card hidden" onclick="window.location.href='./products/index.html';">
                 <div class="card-front-wrap">
                     <div class="card-front">
                         <p class="sale">تخفيض</p>
-                        <img src="./images/1.1.webp" alt="Product Image" class="card-image" id="productImage1">
-                        <div class="moving-border" id="movingBorder1"></div>
+                        <img src="./images/a.1.jpg" alt="Product Image" class="card-image" id="productImage1">
                     </div>
                     <div class="card-footer">
-                        <p class="description">هودي رمادي سادة</p>
+                        <p class="description">جاكيت فاخر للرجال من كالفن كلاين قابل للطي مع خطوط شيفرون</p>
                         <p class="price">USD 99</p>
                     </div>
                 </div>
             </div>
-            <div class="card hidden">
+            
+            <div class="card hidden" onclick="window.location.href='./products/index.html';">
                 <div class="card-front-wrap">
                     <div class="card-front">
                         <img src="./images/2.1.webp" alt="Product Image" class="card-image" id="productImage2">
@@ -201,7 +200,7 @@
                 </div>
 
             </div>
-            <div class="card hidden">
+            <div class="card hidden" onclick="window.location.href='./products/index.html';">
                 <div class="card-front-wrap">
                     <div class="card-front">
                         <p class="sale">تخفيض</p>
@@ -215,7 +214,7 @@
                 </div>
 
             </div>
-            <div class="card hidden">
+            <div class="card hidden" onclick="window.location.href='./products/index.html';">
                 <div class="card-front-wrap">
                     <div class="card-front">
                         <img src="./images/4.1.webp" alt="Product Image" class="card-image" id="productImage4">
