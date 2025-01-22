@@ -74,9 +74,6 @@ window.addEventListener("load", function () {
 
 
 
-
-
-
   function changeMainImage(thumbnail) {
     const mainImage = document.getElementById('mainImage');
     mainImage.src = thumbnail.src;
@@ -85,7 +82,6 @@ window.addEventListener("load", function () {
     });
     thumbnail.classList.add('active');
 }
-
 
 function selectSize(button) {
     const sizeButtons = document.querySelectorAll('.size-btn');
@@ -101,9 +97,7 @@ const images = [
     '../images/a.3.jpg',
     '../images/a.4.jpg',
 ];
-
 let currentImageIndex = 0;
-
 function openModal(element) {
     const modal = document.getElementById('modal');
     const modalImage = document.getElementById('modalImage');
@@ -112,14 +106,12 @@ function openModal(element) {
     modal.style.display = "block";
     body.classList.add('modal-open');
 }
-
 function closeModal() {
     const modal = document.getElementById('modal');
     const body = document.body;
     modal.style.display = "none";
     body.classList.remove('modal-open');
 }
-
 function changeImage(direction) {
     const modalImage = document.getElementById('modalImage');
     if (direction === 'next') {
@@ -129,27 +121,17 @@ function changeImage(direction) {
     }
     modalImage.src = images[currentImageIndex];
 }
-
 window.addEventListener('click', function(event) {
     const modal = document.getElementById('modal');
     if (event.target === modal) {
         closeModal();
     }
 });
-
 document.getElementById('mainImage').addEventListener('click', function () {
     openModal(this);
 });
-
 document.querySelectorAll('.thumbnail-images img').forEach((img) => {
     img.addEventListener('click', function () {
         changeMainImage(this);
     });
 });
-
-
-
-
-
-
-
