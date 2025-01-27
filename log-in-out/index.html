@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول والخروج</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<button type="button" class="close-btn2" onclick="window.location.href='../index.html'">×</button>
+			<h1>إنشاء حساب</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-instagram"></i></a>
+				<a href="#" class="social"><i class="fa-solid fa-envelope"></i></a>
+			</div>
+			<span>أو استخدم بريدك الإلكتروني للتسجيل</span>
+			<input type="text" placeholder="الاسم" />
+			<input type="email" placeholder="البريد الإلكتروني" />
+			<input type="password" placeholder="كلمة المرور" />
+			<button>انشاء حساب</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<button type="button" class="close-btn" onclick="window.location.href='../index.html'">×</button>
+			<h1>تسجيل الدخول</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-instagram"></i></a>
+				<a href="#" class="social"><i class="fa-solid fa-envelope"></i></a>
+			</div>
+			<span>أو استخدم حسابك</span>
+			<input type="email" placeholder="البريد الإلكتروني" />
+			<input type="password" placeholder="كلمة المرور" />
+			<a href="#">هل نسيت كلمة المرور؟</a>
+			<a href="#"><button onclick="window.location.href='../index.html'">تسجيل الدخول</button></a>
+			<!-- <a href="#" onclick="window.location.href='../index.html';">تسجيل الدخول</a> -->
+			
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>!أهلاً بعودتك</h1>
+				<p>للبقاء على اتصال معنا، يرجى تسجيل الدخول باستخدام بياناتك الشخصية</p>
+				<button class="ghost" id="signIn">تسجيل الدخول</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>مرحباً بك</h1>
+				<p>أدخل تفاصيلك الشخصية وابدأ رحلتك معنا</p>
+				<button class="ghost" id="signUp">انشاء حساب</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="main.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

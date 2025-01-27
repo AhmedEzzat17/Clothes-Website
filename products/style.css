@@ -263,8 +263,9 @@ ul {
   }
   .main-image img {
   max-width: 107%;
-  height: 510px;
-  object-fit: cover;
+  /* height: 510px; */
+  height: 575px;
+  /* object-fit: cover; */
   cursor: pointer;
   }
   .thumbnail-images {
