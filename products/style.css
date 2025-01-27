@@ -792,6 +792,7 @@ ul {
     flex: 1;
     padding: 0 15px;
     margin-bottom: 30px;
+    text-align: center;
   }
   .footer-col h4 {
     font-size: 18px;
@@ -847,11 +848,21 @@ ul {
       width: 25px;
       line-height: 25px;
     }
+    .last-btn{
+      background-color: rgba(255, 255, 255, 0.2)!important;
+      color: var(--white-color--)!important;
+      width: 200px!important;
+    }
+  }
+  @media (max-width: 480px) {
+    .row .footer-col{
+      width: 50%;
+    }  
   }
   .last-btn{
     background-color: rgba(255, 255, 255, 0.2)!important;
     color: var(--white-color--)!important;
-    width: 200px!important;
+    width: 150px!important;
   }
   .last-btn:hover{
     background-color: var(--white-color--)!important;
