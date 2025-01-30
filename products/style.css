@@ -264,8 +264,15 @@ ul {
   .main-image img {
   max-width: 107%;
   /* height: 510px; */
-  height: 575px;
+  height: calc(100vh - 80px);
   /* object-fit: cover; */
+  cursor: pointer;
+  }
+  .modalImage{
+  width: 100%;
+  height: 99.8vh!important;
+  height: 100%;
+  object-fit: contain;
   cursor: pointer;
   }
   .thumbnail-images {
@@ -429,7 +436,7 @@ ul {
   max-width: 50%;
   max-height: 100%;
   width: auto;
-  height: auto;
+  height: 100%;
   }
   .arrow-left,
   .arrow-right {
@@ -502,6 +509,13 @@ ul {
       width: 100%;
       text-align: center;
       order: 1;
+    }
+    .main-image img {
+      max-width: 107%;
+      /* height: 510px; */
+      height: calc(100vh - 190px);
+      object-fit: fill;
+      cursor: pointer;
     }
   
     /* .main-image img {
